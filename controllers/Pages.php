@@ -15,7 +15,7 @@ class Pages extends MX_Controller
     	$data = ['number' =>'' ,'totalCal'=>[],'chamCal'=>[]];
     	if( $this->input->post() ){
     		$number = $this->input->post("number");
-    		$numbers = explode(" ", $number);
+    		$numbers = $this->checkInput($number);
     		if( !empty($numbers) ){
     			foreach ($numbers as $key => $value) {
     				$numbers[$key] = str_split($value);
@@ -33,6 +33,17 @@ class Pages extends MX_Controller
     }
 
 
+    private function checkInput($str=""){
+        $out = [];
+        $out_space = explode(" ", $str);
+        if( !empty($out_space) ){
+            foreach ($out_space as $value) {
+                $out_point = explode(",", $value);
+                $out = array_merge($out,$out_point);
+            }
+        }
+        return $out;
+    }
     private function createStore(){
     	for( $i=0;$i<10;$i++ ){
     		for( $y=0;$y<10;$y++ ){
