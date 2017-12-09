@@ -18,30 +18,30 @@
 	<div class="form-group">
 		<label for="exampleTextarea">Kết quả Chạm {if $totalCal|@count > 0}<i>({$totalCal|@count} Kết quả)</i>{/if}</label>
 		{if $totalCal|@count > 0}
-			<ul>
+			<ol>
 				{foreach $totalCal As $k=>$aa}
 				<li>
 					{foreach ","|explode:$aa  As $a}
-						<span class="btn btn-{$color[$k]} btn-sm">{$a}</span>
+						<span class="btn btn-{$color[$k%$color|@count]} btn-sm">{$a}</span>
 					{/foreach}
 				</li>
 				{/foreach}
-			</ul>
+			</ol>
 		{/if}
 		<textarea class="form-control" rows="5">{if $totalCal|@count > 0}{foreach $totalCal As $aa}{$aa}&#13;{/foreach}{/if}</textarea>
 	</div>
 	<div class="form-group">
 		<label for="exampleTextarea">Kết quả Tổng {if $chamCal|@count > 0}<i>({$chamCal|@count} Kết quả)</i>{/if}</label>
 		{if $chamCal|@count > 0}
-			<ul>
+			<ol>
 				{foreach $chamCal As $k=>$aa}
 				<li>
 					{foreach ","|explode:$aa  As $a}
-						<span class="btn btn-{$color[$k]} btn-sm">{$a}</span>
+						<span class="btn btn-{$color[$k%$color|@count]} btn-sm">{$a}</span>
 					{/foreach}
 				</li>
 				{/foreach}
-			</ul>
+			</ol>
 		{/if}
 		<textarea class="form-control" rows="5">{if $chamCal|@count > 0}{foreach $chamCal As $b}{$b}&#13;{/foreach}{/if}</textarea>
 	</div>

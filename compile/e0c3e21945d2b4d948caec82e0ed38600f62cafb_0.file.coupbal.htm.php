@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.28-dev/73, created on 2017-12-09 15:48:58
+/* Smarty version 3.1.28-dev/73, created on 2017-12-09 15:53:58
   from "/media/quanict/WWW/QuanNH/Trung-lotto/views/coupbal.htm" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/73',
-  'unifunc' => 'content_5a2ba37a787739_55743798',
+  'unifunc' => 'content_5a2ba4a6c71896_46100178',
   'file_dependency' => 
   array (
     'e0c3e21945d2b4d948caec82e0ed38600f62cafb' => 
     array (
       0 => '/media/quanict/WWW/QuanNH/Trung-lotto/views/coupbal.htm',
-      1 => 1512809336,
+      1 => 1512809635,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a2ba37a787739_55743798 ($_smarty_tpl) {
+function content_5a2ba4a6c71896_46100178 ($_smarty_tpl) {
 ?>
 <div class="bs-example" data-example-id="simple-panel"> <div class="panel panel-default">
 	<div class="panel-body"><h1>Lotto-Hoang Chung</div> </div> </div>
@@ -45,7 +45,7 @@ $_smarty_tpl->tpl_vars['color']->value = explode(',',"danger,primary,success,inf
 		<label for="exampleTextarea">Kết quả Chạm <?php if (count($_smarty_tpl->tpl_vars['totalCal']->value) > 0) {?><i>(<?php echo count($_smarty_tpl->tpl_vars['totalCal']->value);?>
  Kết quả)</i><?php }?></label>
 		<?php if (count($_smarty_tpl->tpl_vars['totalCal']->value) > 0) {?>
-			<ul>
+			<ol>
 				<?php
 $_from = $_smarty_tpl->tpl_vars['totalCal']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -73,7 +73,7 @@ if ($__foreach_a_1_total) {
 foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
 $__foreach_a_1_saved_local_item = $_smarty_tpl->tpl_vars['a'];
 ?>
-						<span class="btn btn-<?php echo $_smarty_tpl->tpl_vars['color']->value[$_smarty_tpl->tpl_vars['k']->value];?>
+						<span class="btn btn-<?php echo $_smarty_tpl->tpl_vars['color']->value[$_smarty_tpl->tpl_vars['k']->value%count($_smarty_tpl->tpl_vars['color']->value)];?>
  btn-sm"><?php echo $_smarty_tpl->tpl_vars['a']->value;?>
 </span>
 					<?php
@@ -96,7 +96,7 @@ if ($__foreach_aa_0_saved_key) {
 $_smarty_tpl->tpl_vars['k'] = $__foreach_aa_0_saved_key;
 }
 ?>
-			</ul>
+			</ol>
 		<?php }?>
 		<textarea class="form-control" rows="5"><?php if (count($_smarty_tpl->tpl_vars['totalCal']->value) > 0) {
 $_from = $_smarty_tpl->tpl_vars['totalCal']->value;
@@ -123,7 +123,7 @@ $_smarty_tpl->tpl_vars['aa'] = $__foreach_aa_2_saved_item;
 		<label for="exampleTextarea">Kết quả Tổng <?php if (count($_smarty_tpl->tpl_vars['chamCal']->value) > 0) {?><i>(<?php echo count($_smarty_tpl->tpl_vars['chamCal']->value);?>
  Kết quả)</i><?php }?></label>
 		<?php if (count($_smarty_tpl->tpl_vars['chamCal']->value) > 0) {?>
-			<ul>
+			<ol>
 				<?php
 $_from = $_smarty_tpl->tpl_vars['chamCal']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -151,7 +151,7 @@ if ($__foreach_a_4_total) {
 foreach ($_from as $_smarty_tpl->tpl_vars['a']->value) {
 $__foreach_a_4_saved_local_item = $_smarty_tpl->tpl_vars['a'];
 ?>
-						<span class="btn btn-<?php echo $_smarty_tpl->tpl_vars['color']->value[$_smarty_tpl->tpl_vars['k']->value];?>
+						<span class="btn btn-<?php echo $_smarty_tpl->tpl_vars['color']->value[$_smarty_tpl->tpl_vars['k']->value%count($_smarty_tpl->tpl_vars['color']->value)];?>
  btn-sm"><?php echo $_smarty_tpl->tpl_vars['a']->value;?>
 </span>
 					<?php
@@ -174,7 +174,7 @@ if ($__foreach_aa_3_saved_key) {
 $_smarty_tpl->tpl_vars['k'] = $__foreach_aa_3_saved_key;
 }
 ?>
-			</ul>
+			</ol>
 		<?php }?>
 		<textarea class="form-control" rows="5"><?php if (count($_smarty_tpl->tpl_vars['chamCal']->value) > 0) {
 $_from = $_smarty_tpl->tpl_vars['chamCal']->value;
