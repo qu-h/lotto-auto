@@ -42,6 +42,7 @@ class Pages extends MX_Controller
                 $out = array_merge($out,$out_point);
             }
         }
+        $out = array_filter($out, function($value) { return $value !== ''; });
         return $out;
     }
     private function createStore(){
