@@ -74,11 +74,11 @@ class Pages extends MX_Controller
     		if( is_numeric($num) ){
 				foreach ($this->numbersCheck AS $value) {
 					$total = array_sum(str_split($value));
-					if( $total > 10 ){
+					if( $total >= 10 ){
 						$total -= 10;
 					}
 
-					if ($total ==$num && !in_array($value, $items)) {
+					if ($total==$num && !in_array($value, $items)) {
 						$items[] = $value;
 					}
 				}
